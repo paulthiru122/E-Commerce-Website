@@ -1,0 +1,5 @@
+export {Footer} from './Footer'
+export { InfoSection } from './InfoSection'
+export {Navbar} from './Navbar'
+export {CategorySection} from './CategorySection'
+export {ProductCard} from './ProductCard'
