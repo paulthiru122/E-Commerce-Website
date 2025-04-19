@@ -1,14 +1,11 @@
-import './App.css'
 import React from 'react'
 import { BrowserRouter ,Routes,Route } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import {Footer} from './components/index'
-import {Home, Shop} from './pages/index'
+import {Cart, Home, Shop} from './pages/index'
 
 function App() {
 
-
- 
   return (
     <BrowserRouter>
     <Navbar/>
@@ -16,10 +13,11 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/shop' element={<Shop/>}/>
+      <Route path='/cart' element={<Cart/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;

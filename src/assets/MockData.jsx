@@ -63,15 +63,9 @@ export const mockData = [
         price:48.98
     },
     {
-        id:7,
-        image:Image7,
-        name:'Product 7',
-        price:48.98
-    },
-    {
         id:8,
         image:Image8,
-        name:'Product 8',
+        name:'Product8 ',
         price:48.98
     },
     {
@@ -86,8 +80,4 @@ export const mockData = [
         name:'Product 10',
         price:48.98
     },
-
-
-
-
-]
+  ]
