@@ -1,11 +1,30 @@
 import React, { useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-export const Checkout = () => {
+export const Checkout =( {setOrder}) => {
     const [billingToggle,setBillingToggle] = useState(true)
     const [shippingToggle,setShippingToggle] = useState(false)
     const [paymentToggle,setPaymentToggle] = useState(false)
     const [paymentMethod,setPaymentMethod] = useState('cod')
+    const [shippingInfo,setShippingInfo] = useState({
+        address:'',
+        city:'',
+        zipcode:''
+    })
+    const cart = useSelector(state => state.cart || { products: [], totalPrice: 0 })
+    const navigate= useNavigate()
+    const handleOrder =()=>{
+        const newOrder = {
+            products:cart.products,
+            orderNumber : '122334',
+            shippingInformation:shippingInfo,
+            totalPrice:cart.totalPrice
+        }
+        setOrder(newOrder)
+        navigate('/order-conformation')
+    }
   return (
   <div className='container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24  '>
             
@@ -48,19 +67,19 @@ export const Checkout = () => {
                             <div className={`space-y-4 ${shippingToggle ? '' : 'hidden'}`}>
                                 <div >
                                     <label className='block text-gray-700'>Address</label>
-                                    <input type="text" name='name' placeholder='Enter name' className='w-full px-3 py-2 border' />
+                                    <input type="text" name='name' placeholder='Enter name' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,address:e.target.value})} />
                                 </div>
                             
                             
                                 <div>
-                                    <label className='block text-gray-700'>City</label>
-                                    <input type="email" name='email' placeholder='Enter Email' className='w-full px-3 py-2 border'/>
+                                    <label className='block text-gray-700'>City</label> 
+                                    <input type="email" name='city' placeholder='Enter Email' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,city:e.target.value})}/>
                                 </div>
                            
                             
                                 <div>
                                     <label className='block text-gray-700' >Zip code</label>
-                                    <input type="text" name='phone' placeholder='Enter Phone' className='w-full px-3 py-2 border' />
+                                    <input type="text" name='zipcode' placeholder='Enter Phone' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,zipcode: e.target.value})} />
                                 </div>
                                 </div>
                           </div>
@@ -112,10 +131,36 @@ export const Checkout = () => {
 
                       
                           </div>
-                              <div className='md:w-1/3 bg-white p-6 rounded-lg shadow-md border ml-auto'>
-                                 
+                             <div className='md:w-1/3 bg-white p-6 rounded-lg shadow-md border'>
+                                <h3 className='text-lg font-semibold mb-4'>Order Summary</h3>
+                                <div className='space-y-4'>
+                                {cart?.products?.map(product => (
+                                        <div key={product.id} className='flex justify-between'>
+                                            <div className='flex items-center'>
+                                                <img src={product.image} alt="" className='w-16 h-16 object-contain rounded' />
+                                                <div className='ml-4'>
+                                                    <h3 className='text-md font-semibold'>{product.name}</h3>
+                                                    <p className='text-gray-600'>
+                                                        ${product.price} x {product.quantity}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className='text-gray-600'>
+                                                ${product.price * product.quantity}
+
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className='mt-4 border-t pt-4'>
+                                    <div className='flex justify-between'>
+                                        <span>Total Price:</span>
+                                        <span className='font-semibold'>${cart?.totalPrice?.toFixed(2) || 0}</span>
+                                    </div>
+                                </div>
+                                 <button className='w-full bg-red-600 text-white py-2 mt-6 hover:bg-red-800' onClick={handleOrder}>Place Order</button>
                              
-                          </div>
+                            </div>
                          
                      
             
