@@ -65,7 +65,7 @@ export const mockData = [
     {
         id:8,
         image:Image8,
-        name:'Product8 ',
+        name:'Product 8 ',
         price:48.98
     },
     {
