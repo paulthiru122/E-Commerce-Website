@@ -15,10 +15,10 @@ function App() {
 
     <Routes>
       <Route path='/' element={<Home/>} />
-      <Route path='/shop' element={<Shop/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='/checkout' element={<Checkout setOrder={setOrder}/>}/>
-      <Route path='/order-conformation' element={<Order order={order}/>}/>
+      <Route path='/shop' element={<Shop/>} />
+      <Route path='/cart' element={<Cart/>} />
+      <Route path='/checkout' element={<Checkout setOrder={setOrder} />}/>
+      <Route path='/order-conformation' element={<Order order={order} />}/>
       <Route path='/filter-data' element={<FilterData/>}/>
       <Route path='/product/:id' element={<ProductDetail/>}/>
 

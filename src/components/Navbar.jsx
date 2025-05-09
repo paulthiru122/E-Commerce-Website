@@ -14,6 +14,8 @@ export const Navbar = () => {
     const [search,setSearch] = useState()
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
+    
     const handleSearch = (e)=>{
         e.preventDefault()
         dispatch(setSearchTerm(search))

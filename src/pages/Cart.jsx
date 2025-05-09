@@ -8,6 +8,7 @@ import { decreaseQuantity, increaseQuantity, removeFromCart } from '../redux/Car
 import { useNavigate } from 'react-router-dom'
 
 export const Cart = () => {
+    const products = useSelector(state => state.cart.products)
     const cart = useSelector(state => state.cart)
     const [address,setAddress] = useState('main street,641034')
     const [isModelOpen,setIsModelOpen] = useState(false)
@@ -16,7 +17,7 @@ export const Cart = () => {
     
     return (
         <div className='container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24  '>
-            {cart.products.length > 0 ? (
+            {products.length > 0 ? (
                 <div>
                     <h3 className='text-2xl font-semibold mb-4'>SHOPPING CART</h3>
                     <div className='flex flex-col md:flex-row justify-between space-x-10 mt-8'>
@@ -31,7 +32,7 @@ export const Cart = () => {
                                 </div>
                             </div>
                            
-                                {cart.products.map((product, index) => (
+                                {products.map((product, index) => (
                                     <div key={product.id || index} className='flex items-center justify-between p-3 border-b'>
                                         <div className='flex items-center space-x-4'>
                                             <img src={product.image} alt={product.name} className='w-16 h-16 object-contain rounded' />
@@ -52,8 +53,8 @@ export const Cart = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className='md:w-1/3 bg-white p-6 rounded-lg shadow-md border ml-auto'>
-                                <h3 className='text-sm font-semibold mb-5'>CART TOTAL:</h3>
+                            <div className='md:w-1/3 bg-white p-6 rounded-lg shadow-md border ml-auto md:ml-0 mx-auto w-full'>
+                                <h3 className='text-sm font-semibold mb-5'>CART TOTAL</h3>
                                 <div className='flex justify-between mb-5 border-b pb-1'>
                                     <span className='text-sm'> Total Items:</span>
                                     <span>{cart.totalQuantity}</span>
@@ -75,7 +76,7 @@ export const Cart = () => {
                         <Model isModelOpen={isModelOpen} setIsModelOpen = {setIsModelOpen} >
                             <ChangeAddress setAddress={setAddress} setIsModelOpen={setIsModelOpen}/>
                         </Model>
-                   
+                    
                 </div>
             ) : (
                 <div className='flex justify-center'>

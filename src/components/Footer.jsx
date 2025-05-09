@@ -38,7 +38,7 @@ export const Footer = () => {
         <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'> 
           <p>&copy; 2025 e-SHOP All Rights Reserved</p>
           <div className='flex spacex-4 mt-4 md:mt-0'>
-            <a href="" className='hover:underline'>Privacy Policy</a>
+            <a href="" className='hover:underline pr-2'>Privacy Policy</a>
             <a href="" className='hover:underline'>Terms & Conditions</a>
           </div>
         </div>

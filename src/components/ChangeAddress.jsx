@@ -6,10 +6,8 @@ export const ChangeAddress = ({setAddress,setIsModelOpen}) => {
   const onClose =()=>{
     setAddress(newAddress)
     setIsModelOpen(false)
-
   }
-
-  
+ 
   return (
     <div >
         <input type="text" placeholder='Enter new address' className='border p-2 w-full mb-4' onChange={(e)=> setNewAddress(e.target.value)}/>
