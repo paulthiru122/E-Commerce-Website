@@ -56,7 +56,8 @@ export const Checkout =( {setOrder}) => {
                                 </div>
                                 </div>
                           </div>
-                        // Shipping
+                         {/* Shiiping info */}
+                     
 
                            <div className='border p-2 mb-6'>
                             <div className='flex items-center justify-between' onClick={()=> setShippingToggle(!shippingToggle)}>
@@ -83,7 +84,7 @@ export const Checkout =( {setOrder}) => {
                                 </div>
                                 </div>
                           </div>
-                        //   payment method 
+                         {/* Payment info */}
                         <div className='border p-2 mb-6'>
                         <div className='flex items-center justify-between' onClick={()=> setPaymentToggle(!paymentToggle)}>
                             <h3 className='text-lg font-semibold mb-2'>Payment Method </h3>

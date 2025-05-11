@@ -41,6 +41,7 @@ const cartSlice = createSlice({
         increaseQuantity(state,action){
             const id = action.payload
             const findItem = state.products.find(item =>item.id === id)
+         
             if(findItem){
                 findItem.quantity++
                 findItem.totalPrice += findItem.price
