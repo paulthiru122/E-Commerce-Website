@@ -53,7 +53,7 @@ export const Cart = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className='md:w-1/3 bg-white p-6 rounded-lg shadow-md border ml-auto md:ml-0 mx-auto w-full'>
+                            <div className='md:w-1/3 bg-white p-6 rounded-lg shadow-md border ml-auto md:ml-0 mx-auto w-full mt-2'>
                                 <h3 className='text-sm font-semibold mb-5'>CART TOTAL</h3>
                                 <div className='flex justify-between mb-5 border-b pb-1'>
                                     <span className='text-sm'> Total Items:</span>
@@ -68,7 +68,7 @@ export const Cart = () => {
                                 </div>
                                 <div className='flex justify-between mb-4'>
                                     <span>Total Price:</span>
-                                    <span>{cart.totalPrice.toFixed(2)}</span>
+                                    <span>${cart.totalPrice.toFixed(2)}</span>
                                 </div>
                                 <button className='w-full bg-red-600 text-white py-2 hover:bg-red-800' onClick={()=> navigate('/checkout')}>Proceed to checkout</button>
                             </div>
