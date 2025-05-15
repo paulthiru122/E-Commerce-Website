@@ -42,7 +42,7 @@ const cartSlice = createSlice({
             const id = action.payload
             const findItem = state.products.find(item =>item.id === id)
          
-            if(findItem){
+            if(findItem && findItem.quantity < 10){
                 findItem.quantity++
                 findItem.totalPrice += findItem.price
                 state.totalQuantity++

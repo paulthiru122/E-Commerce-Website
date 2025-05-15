@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className='bg-gray-800 text-white py-8 px-4 md:px-16 lg:px-24' >
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8'>
         <div>
-          <h3 className='text-xl font-semibold'>e-SHOP</h3>
+          <h3 className='text-xl font-semibold'>Phil-Mart</h3>
           <p className='mt-4'>Your one-step fot all your needs.Shop with use and experience the best online shopping experience</p>
         </div>
         <div className='flex flex-col md:items-center'>
@@ -36,7 +36,7 @@ export const Footer = () => {
       </div>
       <div className='mt-8 border-t border-gray-700 pt-4'>
         <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'> 
-          <p>&copy; 2025 e-SHOP All Rights Reserved</p>
+          <p>&copy; 2025 Phil-Mart All Rights Reserved</p>
           <div className='flex spacex-4 mt-4 md:mt-0'>
             <a href="" className='hover:underline pr-2'>Privacy Policy</a>
             <a href="" className='hover:underline'>Terms & Conditions</a>

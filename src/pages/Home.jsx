@@ -32,7 +32,7 @@ export const Home = () => {
             <img src={HeroImage} alt="hero image" className='h-full w-full' />
             <div className='absolute top-16 left-8'>
               <p className='text-gray-600 mb-4'>Code with Thiru</p>
-              <h2 className='text-3xl font-bold'>WELCOME TO E-SHOP</h2>
+              <h2 className='text-3xl font-bold'>WELCOME TO Phil-Mart</h2>
               <p className='bg-red-600 px-8 py-1.5 text-white mt-4 hover:bg-red-700 transform transition-transform duration-300 hover:scale-105'>MILLIONS+PRODUCTS</p>
               <button>SHOP NOW</button>
             </div>

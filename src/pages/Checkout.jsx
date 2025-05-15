@@ -18,7 +18,7 @@ export const Checkout =( {setOrder}) => {
     const handleOrder =()=>{
         const newOrder = {
             products:cart.products,
-            orderNumber : '122334',
+            orderNumber : Math.floor(Math.random() * 100600),
             shippingInformation:shippingInfo,
             totalPrice:cart.totalPrice
         }
@@ -74,13 +74,13 @@ export const Checkout =( {setOrder}) => {
                             
                                 <div>
                                     <label className='block text-gray-700'>City</label> 
-                                    <input type="email" name='city' placeholder='Enter Email' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,city:e.target.value})}/>
+                                    <input type="email" name='city' placeholder='Enter City' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,city:e.target.value})}/>
                                 </div>
                            
                             
                                 <div>
                                     <label className='block text-gray-700' >Zip code</label>
-                                    <input type="text" name='zipcode' placeholder='Enter Phone' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,zipcode: e.target.value})} />
+                                    <input type="text" name='zipcode' placeholder='Enter zipcode' className='w-full px-3 py-2 border' onChange={(e)=>setShippingInfo ({...shippingInfo,zipcode: e.target.value})} />
                                 </div>
                                 </div>
                           </div>
@@ -156,7 +156,7 @@ export const Checkout =( {setOrder}) => {
                                 <div className='mt-4 border-t pt-4'>
                                     <div className='flex justify-between'>
                                         <span>Total Price:</span>
-                                        <span className='font-semibold'>${cart?.totalPrice?.toFixed(2) || 0}</span>
+                                        <span className='font-semibold'>${cart.totalPrice.toFixed(2) }</span>
                                     </div>
                                 </div>
                                  <button className='w-full bg-red-600 text-white py-2 mt-6 hover:bg-red-800' onClick={handleOrder}>Place Order</button>
