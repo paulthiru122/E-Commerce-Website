@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import { ProductCard } from '../components'
 import NoProduct from '../assets/Images/not_found.png'

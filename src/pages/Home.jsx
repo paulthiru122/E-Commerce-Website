@@ -34,7 +34,7 @@ export const Home = () => {
               <p className='text-gray-600 mb-4'>Code with Thiru</p>
               <h2 className='text-3xl font-bold'>WELCOME TO Phil-Mart</h2>
               <p className='bg-red-600 px-8 py-1.5 text-white mt-4 hover:bg-red-700 transform transition-transform duration-300 hover:scale-105'>MILLIONS+PRODUCTS</p>
-              <button>SHOP NOW</button>
+              <button className='mt-4'>SHOP NOW</button>
             </div>
           </div>
           <div>

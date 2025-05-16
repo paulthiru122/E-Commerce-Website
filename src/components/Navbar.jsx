@@ -49,7 +49,7 @@ export const Navbar = () => {
             <div className='flex items-center space-x-4'>
                 <Link to= '/cart' className='relative '> <FaShoppingCart className='text-xl'/>{products.length > 0 && (<span className='absolute top-0 text-xs w-3 left-3 bg-red-600 rounded-full flex justify-center items-center text-white'>{products.length}</span>)} </Link> 
                 <button className='hidden md:block' onClick={()=>setIsModelOpen(true)} >Login | Register</button>
-                <button className='block md:hidden'><FaUser/></button>
+                <button className='block md:hidden ' onClick={()=>setIsModelOpen(true)}><FaUser/></button>
             </div>
         </div>
         <div className='flex items-center justify-center space-x-10 py-4 text-sm font-bold'>

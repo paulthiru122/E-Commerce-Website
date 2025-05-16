@@ -24,60 +24,60 @@ export const mockData = [
         id:1,
         image:Image1,
         name:'Product 1',
-        price: 29.99,
+        price: 34.94,
     },
     {
         id:2,
         image:Image2,
         name:'Product 2',
-        price: 39.99,
+        price: 19.11,
     },
     {
         id:3,
         image:Image3,
         name:'Product 3',
-        price:48.98
+        price:88.98
     },
     {
         id:4,
         image:Image4,
         name:'Product 4',
-        price:48.98
+        price:10.10
     },
     {
         id:5,
         image:Image5,
         name:'Product 5',
-        price:48.98
+        price:28.76
     },
     {
         id:6,
         image:Image6,
         name:'Product 6',
-        price:48.98
+        price:9.93
     },
     {
         id:7,
         image:Image7,
         name:'Product 7',
-        price:48.98
+        price:45.98
     },
     {
         id:8,
         image:Image8,
         name:'Product 8 ',
-        price:48.98
+        price:15.47
     },
     {
         id:9,
         image:Image9,
         name:'Product 9',
-        price:48.98
+        price:97.98
     },
     {
         id:10,
         image:Image10,
         name:'Product 10',
-        price:48.98
+        price:14.37
     },
   ]
