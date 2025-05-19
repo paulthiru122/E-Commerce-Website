@@ -18,7 +18,7 @@ export const Checkout =( {setOrder}) => {
     const handleOrder =()=>{
         const newOrder = {
             products:cart.products,
-            orderNumber : Math.floor(Math.random() * 100600),
+            orderNumber : Math.floor(Math.random() * 175600),
             shippingInformation:shippingInfo,
             totalPrice:cart.totalPrice
         }

@@ -11,7 +11,7 @@ import { setSearchTerm } from '../redux/ProductSlice'
 export const Navbar = () => {
     const [isModelOpen,setIsModelOpen] = useState(false)
     const [isLogin,setIsLogin] = useState(true)
-    const [search,setSearch] = useState()
+    const [search,setSearch] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -20,6 +20,7 @@ export const Navbar = () => {
         e.preventDefault()
         dispatch(setSearchTerm(search))
         navigate('/filter-data')
+        setSearch('')
     }
 
 
@@ -42,7 +43,7 @@ export const Navbar = () => {
             </div>
             <div className='relative flex-1 mx-4'>
                 <form onSubmit={handleSearch}> 
-                    <input className='w-full border py-2 px-4' type="text" placeholder='Search Product' onChange={e => setSearch(e.target.value)}  />
+                    <input className='w-full border py-2 px-4' type="text" placeholder='Search Product' onChange={e => setSearch(e.target.value)} value={search} />
                     <FaSearch className='absolute top-3 right-3 text-red-500'></FaSearch>
                 </form>
             </div>
